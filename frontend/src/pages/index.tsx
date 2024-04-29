@@ -87,9 +87,11 @@ export default function IcConnectPage() {
               </div>
               <div className="text-center">
               <input type="submit" value="Add pet" className="mx-5 bg-indigo-700 text-white font-bold rounded-xl w-full py-3 uppercase mt-5  hover:cursor-pointer hover:bg-indigo-900 md:w-auto px-16" />
-              <button className=" mx-5 bg-indigo-700 text-white font-bold rounded-xl w-full py-3 uppercase mt-5  hover:cursor-pointer hover:bg-indigo-900 md:w-auto px-16"><a href="/Pets">Manage your pets</a></button>
               </div>
             </form>
+            <div className="text-center">
+              <button className=" mx-5 bg-indigo-700 text-white font-bold rounded-xl w-full py-3 uppercase mt-5  hover:cursor-pointer hover:bg-indigo-900 md:w-auto px-16"><a href="/Pets">Manage your pets</a></button>
+            </div>
           </div>
         </>
       )
