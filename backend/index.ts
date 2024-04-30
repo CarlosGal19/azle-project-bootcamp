@@ -11,7 +11,7 @@ export default Server(() => {
         email: string,
         phone: string
     };
-    
+
     let pets: Pet[] = [
         {
             id: 1,
@@ -58,6 +58,13 @@ export default Server(() => {
         res.status(200);
         return res.send('Pet Added')
     })
+
+    app.delete('/pet/:id', (req, res) => {
+        const { id } = req.params;
+        pets = pets.filter(pet => pet.id !== parseInt(id));
+        res.status(200);
+        return res.send('Pet Deleted');
+    });
 
     return app.listen();
 });
