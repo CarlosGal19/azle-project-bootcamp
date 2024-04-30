@@ -70,6 +70,9 @@ const Pets = () => {
                 ))
               }
             </ul>
+            <div className="text-center">
+              <a href="/"><button className=" mx-5 bg-indigo-700 text-white font-bold rounded-xl w-full py-3 uppercase mt-5  hover:cursor-pointer hover:bg-indigo-900 md:w-auto px-16">Add pet</button></a>
+            </div>
           </div>
         </>
       )
