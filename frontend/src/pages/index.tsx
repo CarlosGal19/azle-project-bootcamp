@@ -24,7 +24,7 @@ export default function IcConnectPage() {
         if (values.includes('')) {
             setAlert({
                 type: 'alert',
-                msg: 'ALl fields are required'
+                msg: 'All fields are required'
             });
             return;
         }
@@ -71,7 +71,7 @@ export default function IcConnectPage() {
             <form onSubmit={handleSubmit}>
               <div className="my-6">
                 <label htmlFor="name" className="uppercase text-gray-600 block text-xl font-bold">Name</label>
-                <input type="name" id="name" value={name} onChange={e => setName(e.target.value)} placeholder="TYpe pet name" className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"/>
+                <input type="name" id="name" value={name} onChange={e => setName(e.target.value)} placeholder="Type pet name" className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"/>
               </div>
               <div className="my-6">
                 <label htmlFor="owner" className="uppercase text-gray-600 block text-xl font-bold">Owner</label>
@@ -79,7 +79,7 @@ export default function IcConnectPage() {
               </div>
               <div className="my-6">
                 <label htmlFor="email" className="uppercase text-gray-600 block text-xl font-bold">Email</label>
-                <input type="email" id="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Register email" className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"/>
+                <input type="email" id="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Type owner email" className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"/>
               </div>
               <div className="my-6">
                 <label htmlFor="phone" className="uppercase text-gray-600 block text-xl font-bold">Phone number</label>
