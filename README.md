@@ -12,7 +12,7 @@
 
 ### npm install
 
-## 4.- Levantar réplica de ICP (si no lo habían hecho antes o reiniciar o pararon el proceso):
+## 4.- Levantar réplica de ICP:
 
 ### dfx start --background
 
@@ -21,7 +21,7 @@
 ### NEXT_PUBLIC_API_REST_URL=http://BACKEND_CANISTER_ID.localhost:4943
 ### NEXT_PUBLIC_INTERNET_IDENTITY_URL=http://II_CANISTER_ID.localhost:4943
 
-## 6.- Sustituir BACKEND_CANISTER_ID y II_CANISTER_ID por los ID's que te da cuando le das deploy, eso pueden hacerlo así:
+## 6.- Sustituir BACKEND_CANISTER_ID y II_CANISTER_ID por los ID's que genera cuando se hace deploy:
 
 ### dfx deploy backend
 ### dfx deploy internet-identity
