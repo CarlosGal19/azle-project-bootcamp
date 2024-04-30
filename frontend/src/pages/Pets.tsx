@@ -1,6 +1,7 @@
 import { AuthButton, useRestActor } from "@bundly/ares-react";
 import { useState, useEffect } from 'react';
 import Alert from '../components/Alert';
+import '../app/globals.css';
 
 const Pets = () => {
     const backend = useRestActor("backend");
@@ -28,7 +29,8 @@ const Pets = () => {
    useEffect(() => {
     const fetchData = async () => {
       const response = await backend.get("/pets");
-      if (response.status !== 200) {
+      console.log(response.status)
+      if (response.status === 401) {
         setAlert({
           type: 'alert',
           msg: 'An error has ocurred, try again'

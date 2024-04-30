@@ -90,7 +90,7 @@ export default function IcConnectPage() {
               </div>
             </form>
             <div className="text-center">
-              <button className=" mx-5 bg-indigo-700 text-white font-bold rounded-xl w-full py-3 uppercase mt-5  hover:cursor-pointer hover:bg-indigo-900 md:w-auto px-16"><a href="/Pets">Manage your pets</a></button>
+            <a href="/Pets"><button className=" mx-5 bg-indigo-700 text-white font-bold rounded-xl w-full py-3 uppercase mt-5  hover:cursor-pointer hover:bg-indigo-900 md:w-auto px-16">Manage your pets</button></a>
             </div>
           </div>
         </>
