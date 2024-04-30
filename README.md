@@ -1,88 +1,35 @@
-# Fullstack dApp (Azle + Express + NextJS + ICP)
+## Pasos para correr el proyecto:
 
-This template is designed to easily build applications deployed on ICP using Azle + Express for RESTful APIs and Next.js for frontend development.
+## 1.- Clonar repositorio:
 
-## Run Locally
+### git clone https://github.com/CarlosGal19/azle-project-bootcamp.git 
 
-Clone the project
+## 2.- Ingresar al proyecto:
 
-```bash
-  git clone https://github.com/adrian-d-hidalgo/azle-api-rest-nextjs
-```
+### cd azle-project-bootcamp
 
-Go to the project directory
+## 3.- Instalar dependencias de Node:
 
-```bash
-  cd azle-api-rest-nextjs
-```
+### npm install
 
-Install dependencies
+## 4.- Levantar réplica de ICP (si no lo habían hecho antes o reiniciar o pararon el proceso):
 
-```bash
-npm install
-```
+### dfx start --background
 
-Create a .env file:
+## 5.- Crear un archivo llamado .env dentro de la carpeta frontend y poner este contenido:
 
-```bash
-# Create .env file
-cp frontend/.env-example frontend/.env
-```
+### NEXT_PUBLIC_API_REST_URL=http://BACKEND_CANISTER_ID.localhost:4943
+### NEXT_PUBLIC_INTERNET_IDENTITY_URL=http://II_CANISTER_ID.localhost:4943
 
-Start a ICP local replica:
+## 6.- Sustituir BACKEND_CANISTER_ID y II_CANISTER_ID por los ID's que te da cuando le das deploy, eso pueden hacerlo así:
 
-`dfx start --background --clean`
+### dfx deploy backend
+### dfx deploy internet-identity
 
-Get your canister ids:
+## 7.- Navegar a la carpeta frontend desde la terminal de la siguiente forma:
 
-```bash
-# Create canisters
-dfx canister create --all
+### cd frontend
 
-# Get backend canister id
-dfx canister id backend
+## 8.- Y correr el servidor de desarrollo:
 
-# Get internet-identity canister id
-dfx canister id internet-identity
-```
-
-Your .env file should look something like this:
-
-```bash
-# Replace BACKEND_CANISTER_ID with your backend canister id
-NEXT_PUBLIC_API_REST_URL=http://BACKEND_CANISTER_ID.localshot:4943
-# Replace INTERNET_IDENTITY_CANISTER_ID with your internet-identity canister id
-NEXT_PUBLIC_INTERNET_IDENTITY_URL=http://INTERNET_IDENTITY_CANISTER_ID.localshot:4943
-```
-
-Deploy your canisters:
-
-`dfx deploy`
-
-You will receive a result similar to the following (ids could be different four you):
-
-```bash
-URLs:
-  Frontend canister via browser
-    frontend: http://127.0.0.1:4943/?canisterId=be2us-64aaa-aaaaa-qaabq-cai
-  Backend canister via Candid interface:
-    backend: http://127.0.0.1:4943/?canisterId=bd3sg-teaaa-aaaaa-qaaba-cai&id=bkyz2-fmaaa-aaaaa-qaaaq-cai
-```
-
-Open your web browser and enter the Frontend URL to view the web application in action.
-
-## Test frontend without deploy to ICP Replica
-
-Comment the next line into `frontend/next.config.mjs` file:
-
-```javascript
-// output: "export",
-```
-
-Then, navitate to `frontend` folder:
-
-`cd frontend`
-
-Run the following script:
-
-`npm run dev`
+### npm run dev
